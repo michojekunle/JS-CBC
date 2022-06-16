@@ -138,84 +138,111 @@
 // var b = 8;
 // var c = 8;
 
-// console.log(c===b)
+// // console.log(c===b)
 
-// console.log(val);
+// // console.log(val);
 
-// //exercise 2
-// console.log(5 >= 1);
-// console.log(0 === 1);
-// console.log(4 <= 1);
-// console.log(1 != 1);
-// console.log('A' > 'B');
-// console.log('B' < 'C');
-// console.log('a' > 'A');
-// console.log('b' < 'A');
-// console.log(true === false);
-// console.log(true != true)
+// // //exercise 2
+// // console.log(5 >= 1);
+// // console.log(0 === 1);
+// // console.log(4 <= 1);
+// // console.log(1 != 1);
+// // console.log('A' > 'B');
+// // console.log('B' < 'C');
+// // console.log('a' > 'A');
+// // console.log('b' < 'A');
+// // console.log(true === false);
+// // console.log(true != true)
 
-// const id = "1";
+// // const id = "1";
 
-// if(id === 1) {
-//     console.log(true);
+// // if(id === 1) {
+// //     console.log(true);
+// // }
+// // else {
+// //     console.log(false);
+// // }
+
+// // const color = "red";
+
+// // if(color === "red"){
+// //     console.log("stop");
+// // } else if (color === "amber") {
+// //     console.log("Ready");
+// // } else if (color === "green") {
+// //     console.log("go");
+// // } else {
+// //     console.error("Your");
+// // }
+
+// // //if statements on driving a keyless car
+
+// // let age = +prompt("How old are you");
+// // console.log(age)
+
+// // if (age < 18){
+// //     alert("Sorry you are too young to drive. Powering off");
+// // }else if (age === 18){
+// //     alert("Congratulations!! on your first year of driving. Powering on");
+// // }else if (age > 18 && age <= 60){
+// //     alert("Enjoy your ride, Powering on");
+// // }else if (age > 60){
+// //     alert("You should retire from driving, Powering off");
+// // } else {
+// //     alert("Please Enter a valid Number");
+// // }
+
+// //Week one javascript project @CBC
+
+// //1.  Program to calculate the area of a Triangle 
+// //    Using the base and height value accepted as input from the user
+
+// // const base = +prompt("Please, Enter the value for the base of your triangle");
+// // const height = +prompt("Please, Enter the value for the height of your triangle");
+
+// // let areaOfTriangle = 0.5 * base * height;
+
+// // alert(`The Area of your triangle is ${areaOfTriangle}`);
+
+// // //2. Guess a number 
+// // //    A Program that generates a random number and prompts 
+// // //    the user to guess and compares the user's input to the 
+// // //    random number generated and alerts the user as to whether
+// // //    the user guessed right or not.
+
+// // const userInput = +prompt("Guess a number between 1 and 20");
+
+// // let randomNumber = Math.ceil(Math.random()*20);
+
+// // if(userInput === randomNumber){
+// //     alert("Correct Guess");
+// // }else {
+// //     alert("Not Matched");
+// // }
+
+// //switch 
+
+// const cocktail = prompt("Hey There!, What's your favourite cocktail");
+
+// switch (cocktail.toLowerCase()) {
+//     case 'martini':
+//         alert('Senior Man choice!');
+//         break;
+//     case 'daiquiri':
+//         alert('Good Taste!');
+//         break;
+//     case 'marijarita':
+//         alert('Why so soft!');
+//         break;
+//     default:
+//         alert('We do not have that here!');
+//         break;
 // }
-// else {
-//     console.log(false);
-// }
 
-// const color = "red";
+// //Array
+// let arr1 = [53430, 771, 8652, 3, 384, 847];
 
-// if(color === "red"){
-//     console.log("stop");
-// } else if (color === "amber") {
-//     console.log("Ready");
-// } else if (color === "green") {
-//     console.log("go");
-// } else {
-//     console.error("Your");
-// }
+// //sort array 
+// //s
 
-// //if statements on driving a keyless car
-
-// let age = +prompt("How old are you");
-// console.log(age)
-
-// if (age < 18){
-//     alert("Sorry you are too young to drive. Powering off");
-// }else if (age === 18){
-//     alert("Congratulations!! on your first year of driving. Powering on");
-// }else if (age > 18 && age <= 60){
-//     alert("Enjoy your ride, Powering on");
-// }else if (age > 60){
-//     alert("You should retire from driving, Powering off");
-// } else {
-//     alert("Please Enter a valid Number");
-// }
-
-//Week one javascript project @CBC
-
-//1.  Program to calculate the area of a Triangle 
-//    Using the base and height value accepted as input from the user
-
-const base = +prompt("Please, Enter the value for the base of your triangle");
-const height = +prompt("Please, Enter the value for the height of your triangle");
-
-let areaOfTriangle = 0.5 * base * height;
-
-alert(`The Area of your triangle is ${areaOfTriangle}`);
-
-//2. Guess a number 
-//    A Program that generates a random number and prompts 
-//    the user to guess and compares the user's input to the 
-//    random number generated and alerts the user as to whether
-//    the user guessed right or not.
-
-const userInput = +prompt("Guess a number between 1 and 20");
-
-let randomNumber = Math.ceil(Math.random()*20);
-
-if(userInput === randomNumber){
-    alert("Correct Guess");
-}else {
-    alert("Not Matched");
-}
+// const birthday = new Date('8-15-2007 11:25:50');
