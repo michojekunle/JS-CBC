@@ -246,3 +246,13 @@
 // //s
 
 // const birthday = new Date('8-15-2007 11:25:50');
+
+//loop
+
+//1. while loop 
+
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
