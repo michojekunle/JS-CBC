@@ -251,8 +251,29 @@
 
 //1. while loop 
 
-let i = 0;
-while (i < 10) {
-    console.log(i);
+// let i = 0;
+// while (i < 10) {
+//     console.log(i);
+//     i++;
+// }
+
+var myArray = [];
+var i = 0;
+while (i <= 9){
+    myArray.push(i);
     i++;
+}
+
+console.table(myArray);
+
+//for loop
+
+var myArray = [];
+
+
+//exercise
+const  myArray2 = [];
+let total = 0;
+
+for(let x = 1; x<myArray2.length;i+=2){
 }
