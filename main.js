@@ -257,23 +257,163 @@
 //     i++;
 // }
 
-var myArray = [];
-var i = 0;
-while (i <= 9){
-    myArray.push(i);
-    i++;
-}
+// var myArray = [];
+// var i = 0;
+// while (i <= 9){
+//     myArray.push(i);
+//     i++;
+// }
 
-console.table(myArray);
+// console.table(myArray);
 
-//for loop
+// //for loop
 
-var myArray = [];
+// var myArray = [];
 
 
-//exercise
-const  myArray2 = [];
-let total = 0;
+// //exercise
+// const  myArray2 = [];
+// let total = 0;
 
-for(let x = 1; x<myArray2.length;i+=2){
+// for(let x = 1; x<myArray2.length;i+=2){
+// }
+
+
+// // const animals = ['rabbit', 'dog', 'goat'];
+
+// // for (i=0;i<animals.length;i++){
+// //     console.log(animals[i]);
+// // }
+
+// //foreach array method 
+// // animals.forEach(function(animal, index) {
+// //     console.log(animal, index);
+// // })
+
+// //Map
+// const user = [
+//     {
+//         id:0,
+//         username:'Samuel'
+//     },
+//     {
+//         id:1,
+//         username:'Janet'
+//     },
+//     {
+//         id:2,
+//         username:'Joshua'
+//     }
+// ];
+
+// let arr = [];
+
+// user.forEach(function(user){
+//     console.log(user.id);
+
+//     let temp = user.id;
+    
+//     arr.push(temp)
+// })
+// console.table(arr);
+
+
+// const ids = user.map(function(user) {
+//     return user.id;
+// })
+
+// // console.log(ids);
+
+// const usernames = user.map(function(user){
+//     return user.username;
+// })
+
+// console.log(usernames);
+
+//For ..in
+// const user = {
+//     id: 0,
+//     username: 'john',
+//     age: 40
+// }
+
+// for (let x in user) {
+//     console.log(user['username']);
+// }
+
+
+const database = [
+    {
+        'username': 'AMD',
+        'password': 'michspassword'
+    },
+    {
+        'username': 'daylight',
+        'password': 'daylightspassword'
+    },
+    {
+        'username': 'mitty',
+        'password': 'mittyspassword'
+    },
+    {
+        'username': 'milly millz',
+        'password': 'millymillzspassword'
+    },
+    {
+        'username': 'amtnopz',
+        'password': 'amtnopzspassword'
+    },
+    {
+        'username': 'bro',
+        'password': 'brospassword'
+    }
+]
+
+const newsfeed = [
+    {
+        'username': 'AMD',
+        'timeline': 'this is my first twitter mock up'
+    },
+    {
+        'username': 'daylight',
+        'timeline': 'daylightspassed the test'
+    },
+    {
+        'username': 'mitty',
+        'timeline': 'mittyspasswordbbg'
+    },
+    {
+        'username': 'milly millz',
+        'timeline': 'milly millz a mentor, a forex expert came down to lagos nigeria to help we nigerians.'
+    },
+    {
+        'username': 'amtnopz',
+        'timeline': 'amtnopz the best guy na my personal guyyyo'
+    },
+    {
+        'username': 'bro',
+        'timeline': 'na this bro be this'
+    }
+]
+
+
+let username = prompt('Enter Your username');
+let password = prompt('Enter Your Password');
+
+let i;
+
+signIn(username, password);
+
+function signIn(username, password) {
+    database.forEach(user => {
+        if (username === database['username'] && password === database['password']){
+                // const showTimeline = newsfeed.map(function(user){
+                // return `${newsfeed.username}: \n${newsfeed.timeline}`
+            // })
+            // alert(showTimeline)
+            alert('found it!')
+        } else 
+            alert('Username and password mismatch');
+    });
+    
 }
