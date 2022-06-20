@@ -402,18 +402,23 @@ let password = prompt('Enter Your Password');
 
 let i;
 
-signIn(username, password);
+
+
+function validUser(username, password) {
+     for(i=0;i<database.length;i++){
+         if(database[i].username===username && database[i].password===password ){
+             return true;
+         } 
+     }
+     return false
+}
 
 function signIn(username, password) {
-    database.forEach(user => {
-        if (username === database['username'] && password === database['password']){
-                // const showTimeline = newsfeed.map(function(user){
-                // return `${newsfeed.username}: \n${newsfeed.timeline}`
-            // })
-            // alert(showTimeline)
-            alert('found it!')
-        } else 
-            alert('Username and password mismatch');
-    });
-    
+    if(validUser(username,password)){
+        alert('smooth');
+    }
+    else 
+        alert('incorrect password')
 }
+
+signIn(username, password)
