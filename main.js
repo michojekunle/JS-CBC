@@ -413,12 +413,24 @@ function validUser(username, password) {
      return false
 }
 
-function signIn(username, password) {
-    if(validUser(username,password)){
-        alert('smooth');
-    }
-    else 
-        alert('incorrect password')
+function timeline(usernameInput) {
+    newsfeed.forEach(function(user) {
+        
+        if(user['username']===usernameInput){
+            alert(`${user['username']} \n${user['timeline']}`);
+            console.log(user['username'], user['timeline'])
+        }
+    })
 }
 
+function signIn(username, password) {
+    if(validUser(username,password)){
+        timeline(username);
+    }
+    else 
+        alert('username or password incorrect')
+}
+
+
 signIn(username, password)
+
