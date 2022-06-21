@@ -402,20 +402,18 @@ let password = prompt('Enter Your Password');
 
 let i;
 
-
-
 function validUser(username, password) {
-     for(i=0;i<database.length;i++){
-         if(database[i].username===username && database[i].password===password ){
-             return true;
+    let returnValue; 
+    database.forEach(function(user) {
+         if(user['username']===username && user['password']===password){
+              returnValue = true;
          } 
-     }
-     return false
+     })
+    return returnValue;
 }
 
 function timeline(usernameInput) {
-    newsfeed.forEach(function(user) {
-        
+    newsfeed.forEach(function(user) {        
         if(user['username']===usernameInput){
             alert(`${user['username']} \n${user['timeline']}`);
             console.log(user['username'], user['timeline'])
@@ -423,14 +421,15 @@ function timeline(usernameInput) {
     })
 }
 
+validUser(username, password);
+
 function signIn(username, password) {
-    if(validUser(username,password)){
+    if(validUser(username, password)){
         timeline(username);
     }
     else 
         alert('username or password incorrect')
 }
-
 
 signIn(username, password)
 
