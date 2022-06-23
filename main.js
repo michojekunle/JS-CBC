@@ -342,94 +342,105 @@
 // }
 
 
-const database = [
-    {
-        'username': 'AMD',
-        'password': 'michspassword'
-    },
-    {
-        'username': 'daylight',
-        'password': 'daylightspassword'
-    },
-    {
-        'username': 'mitty',
-        'password': 'mittyspassword'
-    },
-    {
-        'username': 'milly millz',
-        'password': 'millymillzspassword'
-    },
-    {
-        'username': 'amtnopz',
-        'password': 'amtnopzspassword'
-    },
-    {
-        'username': 'bro',
-        'password': 'brospassword'
-    }
-]
+// const database = [
+//     {
+//         'username': 'AMD',
+//         'password': 'michspassword'
+//     },
+//     {
+//         'username': 'daylight',
+//         'password': 'daylightspassword'
+//     },
+//     {
+//         'username': 'mitty',
+//         'password': 'mittyspassword'
+//     },
+//     {
+//         'username': 'milly millz',
+//         'password': 'millymillzspassword'
+//     },
+//     {
+//         'username': 'amtnopz',
+//         'password': 'amtnopzspassword'
+//     },
+//     {
+//         'username': 'bro',
+//         'password': 'brospassword'
+//     }
+// ]
 
-const newsfeed = [
-    {
-        'username': 'AMD',
-        'timeline': 'this is my first twitter mock up'
-    },
-    {
-        'username': 'daylight',
-        'timeline': 'daylightspassed the test'
-    },
-    {
-        'username': 'mitty',
-        'timeline': 'mittyspasswordbbg'
-    },
-    {
-        'username': 'milly millz',
-        'timeline': 'milly millz a mentor, a forex expert came down to lagos nigeria to help we nigerians.'
-    },
-    {
-        'username': 'amtnopz',
-        'timeline': 'amtnopz the best guy na my personal guyyyo'
-    },
-    {
-        'username': 'bro',
-        'timeline': 'na this bro be this'
-    }
-]
+// const newsfeed = [
+//     {
+//         'username': 'AMD',
+//         'timeline': 'this is my first twitter mock up'
+//     },
+//     {
+//         'username': 'daylight',
+//         'timeline': 'daylightspassed the test'
+//     },
+//     {
+//         'username': 'mitty',
+//         'timeline': 'mittyspasswordbbg'
+//     },
+//     {
+//         'username': 'milly millz',
+//         'timeline': 'milly millz a mentor, a forex expert came down to lagos nigeria to help we nigerians.'
+//     },
+//     {
+//         'username': 'amtnopz',
+//         'timeline': 'amtnopz the best guy na my personal guyyyo'
+//     },
+//     {
+//         'username': 'bro',
+//         'timeline': 'na this bro be this'
+//     }
+// ]
 
 
-let username = prompt('Enter Your username');
-let password = prompt('Enter Your Password');
+// let username = prompt('Enter Your username');
+// let password = prompt('Enter Your Password');
 
-let i;
+// let i;
 
-function validUser(username, password) {
-    let returnValue; 
-    database.forEach(function(user) {
-         if(user['username']===username && user['password']===password){
-              returnValue = true;
-         } 
-     })
-    return returnValue;
+// function validUser(username, password) {
+//     let returnValue; 
+//     database.forEach(function(user) {
+//          if(user['username']===username && user['password']===password){
+//               returnValue = true;
+//          } 
+//      })
+//     return returnValue;
+// }
+
+// function timeline(usernameInput) {
+//     newsfeed.forEach(function(user) {        
+//         if(user['username']===usernameInput){
+//             alert(`${user['username']} \n${user['timeline']}`);
+//             console.log(user['username'], user['timeline'])
+//         }
+//     })
+// }
+
+// validUser(username, password);
+
+// function signIn(username, password) {
+//     if(validUser(username, password)){
+//         timeline(username);
+//     }
+//     else 
+//         alert('username or password incorrect')
+// }
+
+// signIn(username, password)
+
+const user = {
+    "firstName": 'AYO',
+    "lastname": 'MICH',
+    "subscription": 'exceptional',
 }
 
-function timeline(usernameInput) {
-    newsfeed.forEach(function(user) {        
-        if(user['username']===usernameInput){
-            alert(`${user['username']} \n${user['timeline']}`);
-            console.log(user['username'], user['timeline'])
-        }
-    })
+const greet = (firstName, lastName) => {
+    alert(`Hello ${firstName} ${lastName}`)
 }
 
-validUser(username, password);
-
-function signIn(username, password) {
-    if(validUser(username, password)){
-        timeline(username);
-    }
-    else 
-        alert('username or password incorrect')
-}
-
-signIn(username, password)
-
+greet(user.firstName, user.lastname);
