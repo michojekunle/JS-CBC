@@ -444,3 +444,7 @@ const greet = (firstName, lastName) => {
 }
 
 greet(user.firstName, user.lastname);
+
+function person() {
+    this.firstName = this.firstName
+}
