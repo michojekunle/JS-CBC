@@ -506,28 +506,192 @@
 // console.log(ben)
 
 
-let obj = {
-    a: 'a',
-    b: 'b', 
-    c: 'c'
-};
+// let obj = {
+//     a: 'a',
+//     b: 'b', 
+//     c: 'c'
+// };
 
-let clone1 = Object.assign({}, obj);
+// let clone1 = Object.assign({}, obj);
 
-obj.c = 5;
+// obj.c = 5;
 
-console.log(obj);
-console.log(clone1);
+// console.log(obj);
+// console.log(clone1);
 
-let obj2 = {
-    d: 'f',
-    e: 'e',
-    f: 'f'
+// let obj2 = {
+//     d: 'f',
+//     e: 'e',
+//     f: 'f'
+// }
+
+// let clone3 = {...obj2};
+
+// obj2.f = 9;
+
+// console.log(obj2)
+// console.log(clone3)
+
+//class 
+// class Person{
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthday = dob;
+//     }
+    
+//     greet(){
+//        return `Hello ${this.firstName} ${this.lastName}`      
+//     }
+
+//     getsNarried(newLastName){
+//         this.lastName = newLastName;
+//     }
+
+//     static addNum(x, y) {
+//         return x + y;
+//     }
+
+//     static multiplyNum(x, y) {
+//         return x * y;
+//     }
+// }
+
+// const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
+
+
+// eniola.greet();
+// eniola.getsNarried('NICHOLAS');
+
+// console.log(eniola);
+// console.log(Person.addNum(4, 5));
+
+
+//SUB-CLASSES 
+
+// class Person{
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthday = dob;
+//     }
+    
+//     greet(){
+//        return `Hello ${this.firstName} ${this.lastName}`      
+//     }
+
+//     getsNarried(newLastName){
+//         this.lastName = newLastName;
+//     }
+
+//     static addNum(x, y) {
+//         return x + y;
+//     }
+
+//     static multiplyNum(x, y) {
+//         return x * y;
+//     }
+// }
+
+// const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
+
+
+// eniola.greet();
+// eniola.getsNarried('NICHOLAS');
+
+// console.log(eniola);
+// console.log(Person.addNum(4, 5));
+// console.log(Person.multiplyNum(4, 5));
+
+// class Customer extends Person{
+//     constructor(firstName, lastName, dob, membership, email) {
+//         super(firstName, lastName, dob)
+//         this.membership = membership;
+//         this.birthday = new Date(dob);
+//     }
+
+//     static getMembershipCost(){
+//         return 500;
+//     }
+// }
+
+// const kofo = new Customer('kofo', 'Ragnar', '8-8-1987', 'plus');
+
+// console.log(kofo);
+
+class Animal {
+    constructor(name, birthType, color){
+        this.name = name;
+        this.birthType = birthType;
+        this.color = color;
+    }
 }
 
-let clone3 = {...obj2};
+class Mammal extends Animal{
+    constructor(name, birthType, color) {
+        super(name, birthType, color);
+    };
 
-obj2.f = 9;
+    static sound() {
+        return 'moo';
+    };
+};
 
-console.log(obj2)
-console.log(clone3)
+const cow = new Mammal('COW', 'VIVIPARITY', 'WHITE');
+
+console.log(cow);
+console.log(Mammal.sound());
+
+
+//games character
+
+class GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        this.name = name;
+        this.color = color;
+        this.xpLevel = xpLevel;
+    }
+}
+
+class Goblin extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
+
+    static action() {
+        return 'Steal';
+    }
+}
+
+class Wizard extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
+
+    static action() {
+        return 'magic';
+    }
+}
+
+class Elf extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
+
+    static action() {
+        return 'annoy';
+    }
+}
+
+const goblin1 = new Goblin('goblin1', 'blue', 'Level_59')
+const wizard1 = new Wizard('wizard1', 'orange', 'Level_129')
+const elf1 = new Elf('elf1', 'green', 'Level_89')
+
+console.log(goblin1);
+console.log(Goblin.action());
+
+console.log(wizard1);
+console.log(Wizard.action());
+
+console.log(elf1);
+console.log(Elf.action());
