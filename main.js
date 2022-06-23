@@ -433,18 +433,101 @@
 
 // signIn(username, password)
 
-const user = {
-    "firstName": 'AYO',
-    "lastname": 'MICH',
-    "subscription": 'exceptional',
+// const user = {
+//     "firstName": 'AYO',
+//     "lastname": 'MICH',
+//     "subscription": 'exceptional',
+// }
+
+// const greet = (firstName, lastName) => {
+//     alert(`Hello ${firstName} ${lastName}`)
+// }
+
+// greet(user.firstName, user.lastname);
+
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.birthday = new Date(dob);
+//  }
+
+//  //prototypes
+// Person.prototype.greet = function () {
+//     return `Hello ${this.firstName} ${this.lastName}`
+// }
+
+// Person.prototype.changeLastName = function (lastname) {
+//     this.lastName = lastname;
+// }
+
+// const samuel = new Person('Samuel','Oketola', 22)
+// const michael = new Person('Michael','Enola', 50)
+// const seun = new Person('Shola', 'Seun', 08-09-2022);
+
+// console.log(seun);
+
+// seun.changeLastName('Tolu')
+
+// console.log(seun);
+
+
+// console.log(samuel);
+
+//prototypical inheritance 
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.birthday = new Date(dob);
+//  }
+
+//  //prototypes
+// Person.prototype.greet = function () {
+//     return `Hello ${this.firstName} ${this.lastName}`
+// }
+
+// const nicholas = new Person('Nicholas', 'Putin', '8-8-1989');
+// console.log(nicholas);
+
+// function Customer(firstName, lastName, dob, membership, email) {
+//     Person.call(this, firstName, lastName, dob);
+//     this.membership = membership;
+//     this.email = email;
+// }
+
+
+// //inheriting prototypes 
+// Customer.prototype = Object.create(Person.prototype);
+
+// //prototype come from customer 
+// Customer.prototype.constructor = Customer;
+
+// const ben = new Customer('Ben', 'Janet', '8-8-1976', 'school-club', 'example@gmail.com') 
+
+// console.log(ben)
+
+
+let obj = {
+    a: 'a',
+    b: 'b', 
+    c: 'c'
+};
+
+let clone1 = Object.assign({}, obj);
+
+obj.c = 5;
+
+console.log(obj);
+console.log(clone1);
+
+let obj2 = {
+    d: 'f',
+    e: 'e',
+    f: 'f'
 }
 
-const greet = (firstName, lastName) => {
-    alert(`Hello ${firstName} ${lastName}`)
-}
+let clone3 = {...obj2};
 
-greet(user.firstName, user.lastname);
+obj2.f = 9;
 
-function person() {
-    this.firstName = this.firstName
-}
+console.log(obj2)
+console.log(clone3)
