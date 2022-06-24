@@ -619,79 +619,90 @@
 
 // console.log(kofo);
 
-class Animal {
-    constructor(name, birthType, color){
-        this.name = name;
-        this.birthType = birthType;
-        this.color = color;
-    }
-}
+// class Animal {
+//     constructor(name, birthType, color){
+//         this.name = name;
+//         this.birthType = birthType;
+//         this.color = color;
+//     }
+// }
 
-class Mammal extends Animal{
-    constructor(name, birthType, color) {
-        super(name, birthType, color);
-    };
+// class Mammal extends Animal{
+//     constructor(name, birthType, color) {
+//         super(name, birthType, color);
+//     };
 
-    static sound() {
-        return 'moo';
-    };
-};
+//     static sound() {
+//         return 'moo';
+//     };
+// };
 
-const cow = new Mammal('COW', 'VIVIPARITY', 'WHITE');
+// const cow = new Mammal('COW', 'VIVIPARITY', 'WHITE');
 
-console.log(cow);
-console.log(Mammal.sound());
+// console.log(cow);
+// console.log(Mammal.sound());
 
 
 //games character
 
-class GeneralGamesCharacter {
-    constructor(name, color, xpLevel){
-        this.name = name;
-        this.color = color;
-        this.xpLevel = xpLevel;
-    }
-}
+// class GeneralGamesCharacter {
+//     constructor(name, color, xpLevel){
+//         this.name = name;
+//         this.color = color;
+//         this.xpLevel = xpLevel;
+//     }
+// }
 
-class Goblin extends GeneralGamesCharacter {
-    constructor(name, color, xpLevel){
-        super(name, color, xpLevel);
-    }
+// class Goblin extends GeneralGamesCharacter {
+//     constructor(name, color, xpLevel){
+//         super(name, color, xpLevel);
+//     }
 
-    static action() {
-        return 'Steal';
-    }
-}
+//     static action() {
+//         return 'Steal';
+//     }
+// }
 
-class Wizard extends GeneralGamesCharacter {
-    constructor(name, color, xpLevel){
-        super(name, color, xpLevel);
-    }
+// class Wizard extends GeneralGamesCharacter {
+//     constructor(name, color, xpLevel){
+//         super(name, color, xpLevel);
+//     }
 
-    static action() {
-        return 'magic';
-    }
-}
+//     static action() {
+//         return 'magic';
+//     }
+// }
 
-class Elf extends GeneralGamesCharacter {
-    constructor(name, color, xpLevel){
-        super(name, color, xpLevel);
-    }
+// class Elf extends GeneralGamesCharacter {
+//     constructor(name, color, xpLevel){
+//         super(name, color, xpLevel);
+//     }
 
-    static action() {
-        return 'annoy';
-    }
-}
+//     static action() {
+//         return 'annoy';
+//     }
+// }
 
-const goblin1 = new Goblin('goblin1', 'blue', 'Level_59')
-const wizard1 = new Wizard('wizard1', 'orange', 'Level_129')
-const elf1 = new Elf('elf1', 'green', 'Level_89')
+// const goblin1 = new Goblin('goblin1', 'blue', 'Level_59')
+// const wizard1 = new Wizard('wizard1', 'orange', 'Level_129')
+// const elf1 = new Elf('elf1', 'green', 'Level_89')
 
-console.log(goblin1);
-console.log(Goblin.action());
+// console.log(goblin1);
+// console.log(Goblin.action());
 
-console.log(wizard1);
-console.log(Wizard.action());
+// console.log(wizard1);
+// console.log(Wizard.action());
 
-console.log(elf1);
-console.log(Elf.action());
+// console.log(elf1);
+// console.log(Elf.action());
+
+// reduce array method
+
+const numbers = [15, 12, 13, 14, 13, 15.6, 13.2];
+
+let total = numbers.reduce(getSum = (total, num) => {
+    return total + Math.round(num);
+})
+
+console.log(total);
+
