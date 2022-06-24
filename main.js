@@ -432,214 +432,214 @@
 
 // signIn(username, password)
 
-// const user = {
-//     "firstName": 'AYO',
-//     "lastname": 'MICH',
-//     "subscription": 'exceptional',
-// }
+const user = {
+    "firstName": 'AYO',
+    "lastname": 'MICH',
+    "subscription": 'exceptional',
+}
 
-// const greet = (firstName, lastName) => {
-//     alert(`Hello ${firstName} ${lastName}`)
-// }
+const greet = (firstName, lastName) => {
+    alert(`Hello ${firstName} ${lastName}`)
+}
 
-// greet(user.firstName, user.lastname);
+greet(user.firstName, user.lastname);
 
-// function Person(firstName, lastName, dob) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.birthday = new Date(dob);
-//  }
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+ }
 
-//  //prototypes
-// Person.prototype.greet = function () {
-//     return `Hello ${this.firstName} ${this.lastName}`
-// }
+ //prototypes
+Person.prototype.greet = function () {
+    return `Hello ${this.firstName} ${this.lastName}`
+}
 
-// Person.prototype.changeLastName = function (lastname) {
-//     this.lastName = lastname;
-// }
+Person.prototype.changeLastName = function (lastname) {
+    this.lastName = lastname;
+}
 
-// const samuel = new Person('Samuel','Oketola', 22)
-// const michael = new Person('Michael','Enola', 50)
-// const seun = new Person('Shola', 'Seun', 08-09-2022);
+const samuel = new Person('Samuel','Oketola', 22)
+const michael = new Person('Michael','Enola', 50)
+const seun = new Person('Shola', 'Seun', 08-09-2022);
 
-// console.log(seun);
+console.log(seun);
 
-// seun.changeLastName('Tolu')
+seun.changeLastName('Tolu')
 
-// console.log(seun);
+console.log(seun);
 
 
-// console.log(samuel);
+console.log(samuel);
 
 //prototypical inheritance 
-// function Person(firstName, lastName, dob) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.birthday = new Date(dob);
-//  }
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+ }
 
-//  //prototypes
-// Person.prototype.greet = function () {
-//     return `Hello ${this.firstName} ${this.lastName}`
-// }
+ //prototypes
+Person.prototype.greet = function () {
+    return `Hello ${this.firstName} ${this.lastName}`
+}
 
-// const nicholas = new Person('Nicholas', 'Putin', '8-8-1989');
-// console.log(nicholas);
+const nicholas = new Person('Nicholas', 'Putin', '8-8-1989');
+console.log(nicholas);
 
-// function Customer(firstName, lastName, dob, membership, email) {
-//     Person.call(this, firstName, lastName, dob);
-//     this.membership = membership;
-//     this.email = email;
-// }
-
-
-// //inheriting prototypes 
-// Customer.prototype = Object.create(Person.prototype);
-
-// //prototype come from customer 
-// Customer.prototype.constructor = Customer;
-
-// const ben = new Customer('Ben', 'Janet', '8-8-1976', 'school-club', 'example@gmail.com') 
-
-// console.log(ben)
+function Customer(firstName, lastName, dob, membership, email) {
+    Person.call(this, firstName, lastName, dob);
+    this.membership = membership;
+    this.email = email;
+}
 
 
-// let obj = {
-//     a: 'a',
-//     b: 'b', 
-//     c: 'c'
-// };
+//inheriting prototypes 
+Customer.prototype = Object.create(Person.prototype);
 
-// let clone1 = Object.assign({}, obj);
+//prototype come from customer 
+Customer.prototype.constructor = Customer;
 
-// obj.c = 5;
+const ben = new Customer('Ben', 'Janet', '8-8-1976', 'school-club', 'example@gmail.com') 
 
-// console.log(obj);
-// console.log(clone1);
+console.log(ben)
 
-// let obj2 = {
-//     d: 'f',
-//     e: 'e',
-//     f: 'f'
-// }
 
-// let clone3 = {...obj2};
+let obj = {
+    a: 'a',
+    b: 'b', 
+    c: 'c'
+};
 
-// obj2.f = 9;
+let clone1 = Object.assign({}, obj);
 
-// console.log(obj2)
-// console.log(clone3)
+obj.c = 5;
 
-//class 
-// class Person{
-//     constructor(firstName, lastName, dob) {
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//         this.birthday = dob;
-//     }
+console.log(obj);
+console.log(clone1);
+
+let obj2 = {
+    d: 'f',
+    e: 'e',
+    f: 'f'
+}
+
+let clone3 = {...obj2};
+
+obj2.f = 9;
+
+console.log(obj2)
+console.log(clone3)
+
+//classes 
+class Person{
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = dob;
+    }
     
-//     greet(){
-//        return `Hello ${this.firstName} ${this.lastName}`      
-//     }
+    greet(){
+       return `Hello ${this.firstName} ${this.lastName}`      
+    }
 
-//     getsNarried(newLastName){
-//         this.lastName = newLastName;
-//     }
+    getsNarried(newLastName){
+        this.lastName = newLastName;
+    }
 
-//     static addNum(x, y) {
-//         return x + y;
-//     }
+    static addNum(x, y) {
+        return x + y;
+    }
 
-//     static multiplyNum(x, y) {
-//         return x * y;
-//     }
-// }
+    static multiplyNum(x, y) {
+        return x * y;
+    }
+}
 
-// const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
-
-
-// eniola.greet();
-// eniola.getsNarried('NICHOLAS');
-
-// console.log(eniola);
-// console.log(Person.addNum(4, 5));
+//const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
 
 
-//SUB-CLASSES 
+eniola.greet();
+eniola.getsNarried('NICHOLAS');
 
-// class Person{
-//     constructor(firstName, lastName, dob) {
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//         this.birthday = dob;
-//     }
+console.log(eniola);
+console.log(Person.addNum(4, 5));
+
+
+SUB-CLASSES 
+
+class Person{
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = dob;
+    }
     
-//     greet(){
-//        return `Hello ${this.firstName} ${this.lastName}`      
-//     }
+    greet(){
+       return `Hello ${this.firstName} ${this.lastName}`      
+    }
 
-//     getsNarried(newLastName){
-//         this.lastName = newLastName;
-//     }
+    getsNarried(newLastName){
+        this.lastName = newLastName;
+    }
 
-//     static addNum(x, y) {
-//         return x + y;
-//     }
+    static addNum(x, y) {
+        return x + y;
+    }
 
-//     static multiplyNum(x, y) {
-//         return x * y;
-//     }
-// }
+    static multiplyNum(x, y) {
+        return x * y;
+    }
+}
 
-// const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
+const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
 
 
-// eniola.greet();
-// eniola.getsNarried('NICHOLAS');
+eniola.greet();
+eniola.getsNarried('NICHOLAS');
 
-// console.log(eniola);
-// console.log(Person.addNum(4, 5));
-// console.log(Person.multiplyNum(4, 5));
+console.log(eniola);
+console.log(Person.addNum(4, 5));
+console.log(Person.multiplyNum(4, 5));
 
-// class Customer extends Person{
-//     constructor(firstName, lastName, dob, membership, email) {
-//         super(firstName, lastName, dob)
-//         this.membership = membership;
-//         this.birthday = new Date(dob);
-//     }
+class Customer extends Person{
+    constructor(firstName, lastName, dob, membership, email) {
+        super(firstName, lastName, dob)
+        this.membership = membership;
+        this.birthday = new Date(dob);
+    }
 
-//     static getMembershipCost(){
-//         return 500;
-//     }
-// }
+    static getMembershipCost(){
+        return 500;
+    }
+}
 
-// const kofo = new Customer('kofo', 'Ragnar', '8-8-1987', 'plus');
+const kofo = new Customer('kofo', 'Ragnar', '8-8-1987', 'plus');
 
-// console.log(kofo);
+console.log(kofo);
 
-// class Animal {
-//     constructor(name, birthType, color){
-//         this.name = name;
-//         this.birthType = birthType;
-//         this.color = color;
-//     }
-// }
+class Animal {
+    constructor(name, birthType, color){
+        this.name = name;
+        this.birthType = birthType;
+        this.color = color;
+    }
+}
 
-// class Mammal extends Animal{
-//     constructor(name, birthType, color) {
-//         super(name, birthType, color);
-//     };
+class Mammal extends Animal{
+    constructor(name, birthType, color) {
+        super(name, birthType, color);
+    };
 
-//     static sound() {
-//         return 'moo';
-//     };
-// };
+    static sound() {
+        return 'moo';
+    };
+};
 
-// const cow = new Mammal('COW', 'VIVIPARITY', 'WHITE');
+const cow = new Mammal('COW', 'VIVIPARITY', 'WHITE');
 
-// console.log(cow);
-// console.log(Mammal.sound());
+console.log(cow);
+console.log(Mammal.sound());
 
 
 //games character
@@ -721,76 +721,76 @@ console.log(Elf.action());
 
 // console.log(total);
 
-let a = 4;
-console.log(a);
+// let a = 4;
+// console.log(a);
 
-const users = {
-    son: 'boy',
-    daughter:'girl',
+// const users = {
+//     son: 'boy',
+//     daughter:'girl',
 
-    myFunction(x, y) {
-        return `Hey There your answer is ${x+y}.`;
-    }
-}
+//     myFunction(x, y) {
+//         return `Hey There your answer is ${x+y}.`;
+//     }
+// }
 
-console.log(users);
-console.log(users.son);
-console.log(users.myFunction(2,3));
+// console.log(users);
+// console.log(users.son);
+// console.log(users.myFunction(2,3));
 
 
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log( fruits.join());
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log( fruits.join());
 
-// delete fruits[3];
+// // delete fruits[3];
+// // console.log(fruits);
+
+// // fruits.pop()
+// // 
+// fruits.splice(2, -2, 'mike', 'student', 'stupdi')
 // console.log(fruits);
 
-// fruits.pop()
-// 
-fruits.splice(2, -2, 'mike', 'student', 'stupdi')
-console.log(fruits);
+// const ages = [4, 12, 16, 20, 40, 60, 50,];
 
-const ages = [4, 12, 16, 20, 40, 60, 50,];
+// let myArr = ages.find(checkAge = (age) => {
+//     return age>18
+// })
 
-let myArr = ages.find(checkAge = (age) => {
-    return age>18
-})
+// console.log(myArr);
 
-console.log(myArr);
+// myArr = ages.find(checkAge)
+// console.log(myArr);
 
-myArr = ages.find(checkAge)
-console.log(myArr);
+// function checkAge(age) {
+//     return age > 18;
+// }
 
-function checkAge(age) {
-    return age > 18;
-}
+// myArr = ages.filter(checkAge);
+// console.log(myArr);
 
-myArr = ages.filter(checkAge);
-console.log(myArr);
+// function checkAge(age) {
+//     return age > 18;
+// }
 
-function checkAge(age) {
-    return age > 18;
-}
+// const myArr3 = [5, 6 ,7 , 8, 100, 250]
 
-const myArr3 = [5, 6 ,7 , 8, 100, 250]
+// let reducedValue = myArr3.reduce(subtract = (total, num) => {
+//     return total- num;
+// })
 
-let reducedValue = myArr3.reduce(subtract = (total, num) => {
-    return total- num;
-})
-
-console.log(reducedValue);
+// console.log(reducedValue);
 
 
-reducedValue = myArr3.reduceRight(subtract = (total, num) => {
-    return total- num;
-})
+// reducedValue = myArr3.reduceRight(subtract = (total, num) => {
+//     return total- num;
+// })
 
-console.log(reducedValue);
+// console.log(reducedValue);
 
-const strings = ['one', 'two', 'three'];
+// const strings = ['one', 'two', 'three'];
 
-let numberString = strings.reduce((acc, curr) => {
-  return acc + curr;
-});
+// let numberString = strings.reduce((acc, curr) => {
+//   return acc + curr;
+// });
 
-console.log(numberString); // "one, two, three"
+// console.log(numberString); // "one, two, three"
