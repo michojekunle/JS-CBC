@@ -698,11 +698,17 @@
 
 // reduce array method
 
-const numbers = [15, 12, 13, 14, 13, 15.6, 13.2];
+// const numbers = [15, 12, 13, 14, 13, 15.6, 13.2];
 
-let total = numbers.reduce(getSum = (total, num) => {
-    return total + Math.round(num);
-})
+// let total = numbers.reduce(getSum = (total, num) => {
+//     return total + Math.round(num);
+// })
 
-console.log(total);
+// console.log(total);
+
+
+
+
+
+
 
