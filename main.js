@@ -739,3 +739,58 @@ console.log(users.myFunction(2,3));
 
 
 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log( fruits.join());
+
+// delete fruits[3];
+// console.log(fruits);
+
+// fruits.pop()
+// 
+fruits.splice(2, -2, 'mike', 'student', 'stupdi')
+console.log(fruits);
+
+const ages = [4, 12, 16, 20, 40, 60, 50,];
+
+let myArr = ages.find(checkAge = (age) => {
+    return age>18
+})
+
+console.log(myArr);
+
+myArr = ages.find(checkAge)
+console.log(myArr);
+
+function checkAge(age) {
+    return age > 18;
+}
+
+myArr = ages.filter(checkAge);
+console.log(myArr);
+
+function checkAge(age) {
+    return age > 18;
+}
+
+const myArr3 = [5, 6 ,7 , 8, 100, 250]
+
+let reducedValue = myArr3.reduce(subtract = (total, num) => {
+    return total- num;
+})
+
+console.log(reducedValue);
+
+
+reducedValue = myArr3.reduceRight(subtract = (total, num) => {
+    return total- num;
+})
+
+console.log(reducedValue);
+
+const strings = ['one', 'two', 'three'];
+
+let numberString = strings.reduce((acc, curr) => {
+  return acc + curr;
+});
+
+console.log(numberString); // "one, two, three"
