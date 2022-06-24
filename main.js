@@ -341,7 +341,6 @@
 //     console.log(user['username']);
 // }
 
-
 // const database = [
 //     {
 //         'username': 'AMD',
@@ -645,56 +644,72 @@
 
 //games character
 
-// class GeneralGamesCharacter {
-//     constructor(name, color, xpLevel){
-//         this.name = name;
-//         this.color = color;
-//         this.xpLevel = xpLevel;
-//     }
-// }
+class GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        this.name = name;
+        this.color = color;
+        this.xpLevel = xpLevel;
+    }
+}
 
-// class Goblin extends GeneralGamesCharacter {
-//     constructor(name, color, xpLevel){
-//         super(name, color, xpLevel);
-//     }
+class Goblin extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
 
-//     static action() {
-//         return 'Steal';
-//     }
-// }
+    static action() {
+        return 'Steal';
+    }
+}
 
-// class Wizard extends GeneralGamesCharacter {
-//     constructor(name, color, xpLevel){
-//         super(name, color, xpLevel);
-//     }
+class Wizard extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
 
-//     static action() {
-//         return 'magic';
-//     }
-// }
+    static action() {
+        return 'magic';
+    }
+}
 
-// class Elf extends GeneralGamesCharacter {
-//     constructor(name, color, xpLevel){
-//         super(name, color, xpLevel);
-//     }
+class Elf extends GeneralGamesCharacter {
+    constructor(name, color, xpLevel){
+        super(name, color, xpLevel);
+    }
 
-//     static action() {
-//         return 'annoy';
-//     }
-// }
+    static action() {
+        return 'annoy';
+    }
+}
 
-// const goblin1 = new Goblin('goblin1', 'blue', 'Level_59')
-// const wizard1 = new Wizard('wizard1', 'orange', 'Level_129')
-// const elf1 = new Elf('elf1', 'green', 'Level_89')
+const goblin1 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin2 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin3 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin4 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin5 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin6 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin7 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin8 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin9 = new Goblin('goblin1', 'blue', 'Level_59')
+const goblin10 = new Goblin('goblin1', 'blue', 'Level_59')
 
-// console.log(goblin1);
-// console.log(Goblin.action());
 
-// console.log(wizard1);
-// console.log(Wizard.action());
+console.log(Goblin);
+const wizard1 = new Wizard('wizard1', 'orange', 'Level_129')
+const elf1 = new Elf('elf1', 'green', 'Level_89')
 
-// console.log(elf1);
-// console.log(Elf.action());
+
+console.log(typeof Elf.action)
+console.log(typeof goblin1);
+
+console.log(goblin1);
+console.log(Goblin.action());
+
+console.log(wizard1);
+console.log(Wizard.action());
+
+console.log(elf1);
+console.log(Elf.action());
 
 // reduce array method
 
@@ -706,9 +721,21 @@
 
 // console.log(total);
 
+let a = 4;
+console.log(a);
 
+const users = {
+    son: 'boy',
+    daughter:'girl',
 
+    myFunction(x, y) {
+        return `Hey There your answer is ${x+y}.`;
+    }
+}
 
+console.log(users);
+console.log(users.son);
+console.log(users.myFunction(2,3));
 
 
 
