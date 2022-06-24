@@ -432,38 +432,46 @@
 
 // signIn(username, password)
 
-const user = {
-    "firstName": 'AYO',
-    "lastname": 'MICH',
-    "subscription": 'exceptional',
-}
+// const user = {
+//     "firstName": 'AYO',
+//     "lastname": 'MICH',
+//     "subscription": 'exceptional',
+// }
 
-const greet = (firstName, lastName) => {
-    alert(`Hello ${firstName} ${lastName}`)
-}
+// const greet = (firstName, lastName) => {
+//     alert(`Hello ${firstName} ${lastName}`)
+// }
 
-greet(user.firstName, user.lastname);
+// greet(user.firstName, user.lastname);
 
 function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.birthday = new Date(dob);
+    this.birthday = dob;
+    this.greet = function () {
+       return `Hello ${this.firstName} ${this.lastName}`
+    }
  }
 
  //prototypes
-Person.prototype.greet = function () {
-    return `Hello ${this.firstName} ${this.lastName}`
-}
+// Person.prototype.greet = function () {
+//     return `Hello ${this.firstName} ${this.lastName}`
+// }
 
-Person.prototype.changeLastName = function (lastname) {
-    this.lastName = lastname;
-}
+// Person.prototype.changeLastName = function (lastname) {
+//     this.lastName = lastname;
+// }
 
 const samuel = new Person('Samuel','Oketola', 22)
 const michael = new Person('Michael','Enola', 50)
 const seun = new Person('Shola', 'Seun', 08-09-2022);
 
+console.log(samuel.greet());
+
+
 console.log(seun);
+
+
 
 seun.changeLastName('Tolu')
 
@@ -473,36 +481,36 @@ console.log(seun);
 console.log(samuel);
 
 //prototypical inheritance 
-function Person(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthday = new Date(dob);
- }
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.birthday = new Date(dob);
+//  }
 
- //prototypes
-Person.prototype.greet = function () {
-    return `Hello ${this.firstName} ${this.lastName}`
-}
+//  //prototypes
+// Person.prototype.greet = function () {
+//     return `Hello ${this.firstName} ${this.lastName}`
+// }
 
-const nicholas = new Person('Nicholas', 'Putin', '8-8-1989');
-console.log(nicholas);
+// const nicholas = new Person('Nicholas', 'Putin', '8-8-1989');
+// console.log(nicholas);
 
-function Customer(firstName, lastName, dob, membership, email) {
-    Person.call(this, firstName, lastName, dob);
-    this.membership = membership;
-    this.email = email;
-}
+// function Customer(firstName, lastName, dob, membership, email) {
+//     Person.call(this, firstName, lastName, dob);
+//     this.membership = membership;
+//     this.email = email;
+// }
 
 
-//inheriting prototypes 
-Customer.prototype = Object.create(Person.prototype);
+// //inheriting prototypes 
+// Customer.prototype = Object.create(Person.prototype);
 
-//prototype come from customer 
-Customer.prototype.constructor = Customer;
+// //prototype come from customer 
+// Customer.prototype.constructor = Customer;
 
-const ben = new Customer('Ben', 'Janet', '8-8-1976', 'school-club', 'example@gmail.com') 
+// const ben = new Customer('Ben', 'Janet', '8-8-1976', 'school-club', 'example@gmail.com') 
 
-console.log(ben)
+// console.log(ben)
 
 
 let obj = {
@@ -531,92 +539,92 @@ obj2.f = 9;
 console.log(obj2)
 console.log(clone3)
 
-//classes 
-class Person{
-    constructor(firstName, lastName, dob) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = dob;
-    }
+// //classes 
+// class Person{
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthday = dob;
+//     }
     
-    greet(){
-       return `Hello ${this.firstName} ${this.lastName}`      
-    }
+//     greet(){
+//        return `Hello ${this.firstName} ${this.lastName}`      
+//     }
 
-    getsNarried(newLastName){
-        this.lastName = newLastName;
-    }
+//     getsNarried(newLastName){
+//         this.lastName = newLastName;
+//     }
 
-    static addNum(x, y) {
-        return x + y;
-    }
+//     static addNum(x, y) {
+//         return x + y;
+//     }
 
-    static multiplyNum(x, y) {
-        return x * y;
-    }
-}
+//     static multiplyNum(x, y) {
+//         return x * y;
+//     }
+// }
 
-//const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
-
-
-eniola.greet();
-eniola.getsNarried('NICHOLAS');
-
-console.log(eniola);
-console.log(Person.addNum(4, 5));
+// const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
 
 
-SUB-CLASSES 
+// eniola.greet();
+// eniola.getsNarried('NICHOLAS');
 
-class Person{
-    constructor(firstName, lastName, dob) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = dob;
-    }
+// console.log(eniola);
+// console.log(Person.addNum(4, 5));
+
+
+// //SUB-CLASSES 
+
+// // class Person{
+// //     constructor(firstName, lastName, dob) {
+// //         this.firstName = firstName;
+// //         this.lastName = lastName;
+// //         this.birthday = dob;
+// //     }
     
-    greet(){
-       return `Hello ${this.firstName} ${this.lastName}`      
-    }
+// //     greet(){
+// //        return `Hello ${this.firstName} ${this.lastName}`      
+// //     }
 
-    getsNarried(newLastName){
-        this.lastName = newLastName;
-    }
+// //     getsNarried(newLastName){
+// //         this.lastName = newLastName;
+// //     }
 
-    static addNum(x, y) {
-        return x + y;
-    }
+// //     static addNum(x, y) {
+// //         return x + y;
+// //     }
 
-    static multiplyNum(x, y) {
-        return x * y;
-    }
-}
+// //     static multiplyNum(x, y) {
+// //         return x * y;
+// //     }
+// // }
 
-const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
+// // const eniola = new Person('Eniola', 'Shelby', '8-8-1789')
 
 
-eniola.greet();
-eniola.getsNarried('NICHOLAS');
+// // eniola.greet();
+// // eniola.getsNarried('NICHOLAS');
 
-console.log(eniola);
-console.log(Person.addNum(4, 5));
-console.log(Person.multiplyNum(4, 5));
+// // console.log(eniola);
+// // console.log(Person.addNum(4, 5));
+// // console.log(Person.multiplyNum(4, 5));
 
-class Customer extends Person{
-    constructor(firstName, lastName, dob, membership, email) {
-        super(firstName, lastName, dob)
-        this.membership = membership;
-        this.birthday = new Date(dob);
-    }
+// // class Customer extends Person{
+// //     constructor(firstName, lastName, dob, membership, email) {
+// //         super(firstName, lastName, dob)
+// //         this.membership = membership;
+// //         this.birthday = new Date(dob);
+// //     }
 
-    static getMembershipCost(){
-        return 500;
-    }
-}
+// //     static getMembershipCost(){
+// //         return 500;
+// //     }
+// // }
 
-const kofo = new Customer('kofo', 'Ragnar', '8-8-1987', 'plus');
+// // const kofo = new Customer('kofo', 'Ragnar', '8-8-1987', 'plus');
 
-console.log(kofo);
+// // console.log(kofo);
 
 class Animal {
     constructor(name, birthType, color){
